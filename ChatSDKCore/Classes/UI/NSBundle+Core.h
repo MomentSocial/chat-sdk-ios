@@ -117,6 +117,7 @@
 #define bProfile @"bProfile"
 #define bDone @"bDone"
 #define bEdit @"bEdit"
+#define bClose @"bClose"
 #define b_Ago @"b_Ago"
 
 #define bRemoveFriend @"bRemoveFriend"

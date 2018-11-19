@@ -31,7 +31,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
-    _editButton = [[UIBarButtonItem alloc] initWithTitle:[NSBundle t:bEdit]
+    _editButton = [[UIBarButtonItem alloc] initWithTitle:[NSBundle t:bClose]
                                                    style:UIBarButtonItemStylePlain
                                                   target:self
                                                   action:@selector(editButtonPressed:)];
@@ -79,7 +79,7 @@
 }
 
 -(void) editButtonPressed: (UIBarButtonItem *) item {
-    [self toggleEditing];
+    [self.parentViewController dismissViewControllerAnimated:YES completion:^{ /* do something when the animation is completed */ }];
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
