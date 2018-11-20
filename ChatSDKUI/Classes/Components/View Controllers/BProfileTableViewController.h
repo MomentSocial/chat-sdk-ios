@@ -21,8 +21,6 @@
     BOOL _didLogout;
     
     BOOL _nameIndexed;
-    BOOL _phoneIndexed;
-    BOOL _emailIndexed;
     
     id _keyboardObserver;
     
@@ -36,19 +34,13 @@
 @property (weak, nonatomic) IBOutlet UIView *cell0;
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
-@property (weak, nonatomic) IBOutlet UITextField *phoneNumberField;
-@property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UIButton *profilePictureButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightActionButton;
 @property (weak, nonatomic) IBOutlet UIButton *leftActionButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *nameImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *phoneNumberImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *emailImageView;
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *nameCell;
-@property (weak, nonatomic) IBOutlet UITableViewCell *phoneNumberCell;
-@property (weak, nonatomic) IBOutlet UITableViewCell *emailCell;
 
 //@property (nonatomic, readwrite) id<PUserConnection> userConnection;
 @property (nonatomic, readwrite) id<PUser> user;

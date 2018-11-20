@@ -20,8 +20,6 @@
 @implementation BProfileTableViewController
 
 @synthesize nameField;
-@synthesize phoneNumberField;
-@synthesize emailField;
 @synthesize profilePictureButton;
 
 @synthesize user = _user;
@@ -111,11 +109,11 @@
     nameField.text = _user.name;
     nameField.placeholder = [NSBundle t:bName];
     
-    emailField.text = _user.email;
-    emailField.placeholder = [NSBundle t:bEmail];
+    // emailField.text = _user.email;
+    // emailField.placeholder = [NSBundle t:bEmail];
     
-    phoneNumberField.text = _user.phoneNumber;
-    phoneNumberField.placeholder = [NSBundle t:bPhoneNumber];
+    // phoneNumberField.text = _user.phoneNumber;
+    // phoneNumberField.placeholder = [NSBundle t:bPhoneNumber];
     
     _didLogout = NO;
     
@@ -187,8 +185,8 @@
 -(void) viewTapped {
     // Resign first responder for all fields
     [nameField resignFirstResponder];
-    [phoneNumberField resignFirstResponder];
-    [emailField resignFirstResponder];
+    // [phoneNumberField resignFirstResponder];
+    // [emailField resignFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -211,12 +209,12 @@
             user.name = nameField.text;
         }
         
-        // User cannot set their name to blank or white space
-        if ([emailField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length) {
-            user.email = emailField.text;
-        }
+        // // User cannot set their name to blank or white space
+        // if ([emailField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length) {
+        //     user.email = emailField.text;
+        // }
         
-        user.phoneNumber = phoneNumberField.text;
+        // user.phoneNumber = phoneNumberField.text;
         
         [BChatSDK.search updateIndexForUser:user].thenOnMain(Nil, ^id(NSError * error) {
             [UIView alertWithTitle:[NSBundle t:bErrorTitle] withError:error];
@@ -307,11 +305,11 @@
     nameField.backgroundColor = borderColor;
     nameField.userInteractionEnabled = isCurrent;
     
-    emailField.backgroundColor = borderColor;
-    emailField.userInteractionEnabled = isCurrent;
+    // emailField.backgroundColor = borderColor;
+    // emailField.userInteractionEnabled = isCurrent;
     
-    phoneNumberField.backgroundColor = borderColor;
-    phoneNumberField.userInteractionEnabled = isCurrent;
+    // phoneNumberField.backgroundColor = borderColor;
+    // phoneNumberField.userInteractionEnabled = isCurrent;
     
     profilePictureButton.userInteractionEnabled = isCurrent;
 }
@@ -323,8 +321,8 @@
         
         // Clear fields
         nameField.text = @"";
-        phoneNumberField.text = @"";
-        emailField.text = @"";
+        // phoneNumberField.text = @"";
+        // emailField.text = @"";
         
         [profilePictureButton setImage:_user.defaultImage forState:UIControlStateNormal];
         
