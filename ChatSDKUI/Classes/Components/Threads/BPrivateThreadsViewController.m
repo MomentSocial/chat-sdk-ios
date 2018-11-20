@@ -37,7 +37,7 @@
                                                   action:@selector(editButtonPressed:)];
     
     // If we have no threads we don't have the edit button
-    self.navigationItem.leftBarButtonItem = _threads.count ? _editButton : nil;
+    self.navigationItem.leftBarButtonItem = _editButton;
 }
 
 - (void)viewDidLoad {
