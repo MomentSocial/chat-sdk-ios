@@ -165,9 +165,9 @@
         _profilePicture.image = nil;
     }
     
-    if (message.flagged.intValue) {
-        _timeLabel.text = [NSBundle t:bFlagged];
-    }
+    // if (message.flagged.intValue) {
+    //     _timeLabel.text = [NSBundle t:bFlagged];
+    // }
 
     _timeLabel.text = _message.date.messageTimeAt;
     // We use 10 here because if the messages are less than 10 minutes apart, then we

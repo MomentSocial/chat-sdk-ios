@@ -700,21 +700,21 @@
 
     }
     else {
-        NSString * flagTitle = message.flagged.intValue ? [NSBundle t:bUnflag] : [NSBundle t:bFlag];
+        // NSString * flagTitle = message.flagged.intValue ? [NSBundle t:bUnflag] : [NSBundle t:bFlag];
         
-        UITableViewRowAction * button = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:flagTitle handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-            __typeof__(self) strongSelf = weakSelf;
-            [strongSelf.delegate setMessageFlagged:message isFlagged:message.flagged.intValue].thenOnMain(^id(id success) {
-                // Reload the tableView and not [self reloadData] so we don't go to the bottom of the tableView
-                [tableView_ reloadData];
-                return Nil;
-            }, Nil);
+        // UITableViewRowAction * button = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:flagTitle handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        //     __typeof__(self) strongSelf = weakSelf;
+        //     [strongSelf.delegate setMessageFlagged:message isFlagged:message.flagged.intValue].thenOnMain(^id(id success) {
+        //         // Reload the tableView and not [self reloadData] so we don't go to the bottom of the tableView
+        //         [tableView_ reloadData];
+        //         return Nil;
+        //     }, Nil);
             
-        }];
+        // }];
         
-        button.backgroundColor = message.flagged.intValue ? [UIColor darkGrayColor] : [UIColor redColor];
+        // button.backgroundColor = message.flagged.intValue ? [UIColor darkGrayColor] : [UIColor redColor];
         
-        return @[button];
+        return Nil;
     }
     
 }

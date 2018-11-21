@@ -25,7 +25,6 @@
 		ACF7BE801C8D8AD7003E8983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACF7BE831C8D8AD7003E8983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACF7BE851C8D8AD7003E8983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACF7BEAC1C8EEA4F003E8983 /* ChatSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		B52556CB1FB1ED4E0035F796 /* ChatSDKSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatSDKSwift.entitlements; sourceTree = "<group>"; };
 		B546E4D1215E43BF006199C5 /* TestInterfaceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInterfaceAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +68,6 @@
 				ACF7BE801C8D8AD7003E8983 /* Assets.xcassets */,
 				ACF7BE821C8D8AD7003E8983 /* LaunchScreen.storyboard */,
 				ACF7BE851C8D8AD7003E8983 /* Info.plist */,
-				ACF7BEAC1C8EEA4F003E8983 /* ChatSDK-Bridging-Header.h */,
 				B546E4D1215E43BF006199C5 /* TestInterfaceAdapter.swift */,
 			);
 			path = ChatSDKSwift;

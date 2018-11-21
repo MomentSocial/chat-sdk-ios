@@ -16,7 +16,7 @@
 #define bTextViewVerticalPadding 5.72
 
 #define bFontSize 19
-#define bMaxLines 5
+#define bMaxLines 15
 #define bMinLines 1
 #define bMaxCharacters 0
 

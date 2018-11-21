@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ChatSDKFirebase"
-  s.version          = "4.9.3"
+  s.version          = "4.9.61"
   s.summary          = "Chat SDK - Mobile messaging framework for iOS"
   s.homepage         = "http://chatsdk.co"
   s.license          = { :type => 'Chat SDK License', :file => 'LICENSE.md' }
@@ -46,7 +46,20 @@ Pod::Spec.new do |s|
 	fp.dependency 'ChatSDKFirebase/Adapter'
 
   end
-  
+
+   s.subspec 'ReadReceipts' do |rr|
+
+    rr.source_files = ['ChatSDKFirebase/ReadReceipts/Classes/**/*']
+    rr.resource_bundles = {
+      'ChatReadReceipts' => ['ChatSDKFirebase/ReadReceipts/Assets/**/*', 'ChatSDKFirebase/ReadReceipts/Interface/**/*']
+    }
+
+    rr.dependency 'ChatSDK/Core'
+    rr.dependency 'ChatSDKFirebase/Adapter'
+    rr.dependency 'ChatSDK/UI'
+
+  end
+
  s.subspec 'SocialLogin' do |fsl|
 
 	fsl.source_files = ['ChatSDKFirebase/FirebaseSocialLogin/Classes/**/*']
