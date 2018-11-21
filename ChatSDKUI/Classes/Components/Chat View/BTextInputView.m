@@ -164,7 +164,7 @@
 }
 
 -(void) setMicButtonEnabled: (BOOL) enabled {
-    [self setMicButtonEnabled:enabled sendButtonEnabled:NO];
+    [self setMicButtonEnabled:enabled sendButtonEnabled:YES];
 }
 
 -(void) setMicButtonEnabled: (BOOL) enabled sendButtonEnabled: (BOOL) sendButtonEnabled {
