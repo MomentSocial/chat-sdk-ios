@@ -211,7 +211,7 @@
     }
     
     cell.titleLabel.text = thread.displayName ? thread.displayName : [NSBundle t: bDefaultThreadName];
-    
+    cell.titleLabel.textColor = [UIColor whiteColor];
     cell.profileImageView.image = thread.imageForThread;
     
     //    cell.unreadView.hidden = !thread.unreadMessageCount;

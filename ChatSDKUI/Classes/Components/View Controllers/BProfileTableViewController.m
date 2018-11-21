@@ -85,7 +85,7 @@
     // This needs to be added here so it is reloaded each time
     if ([_user.entityID isEqualToString:currentUser.entityID]) {
         // Add a logout button
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle t:bLogout] style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
+        // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle t:bLogout] style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
         if(BChatSDK.ui.settingsViewController) {
             self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[NSBundle uiImageNamed:@"icn_25_settings.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openSettings)];
         }
@@ -99,7 +99,7 @@
         // Add a back
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle t:bBack] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed)];
         
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle t:bChat] style:UIBarButtonItemStylePlain target:self action:@selector(startChatWithUser)];
+        // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle t:bChat] style:UIBarButtonItemStylePlain target:self action:@selector(startChatWithUser)];
         
         [self currentUserProfile:NO];
     }
@@ -128,7 +128,7 @@
                                                  name:UIKeyboardDidHideNotification
                                                object:Nil];
     
-    self.navigationItem.rightBarButtonItem.enabled = YES;
+    self.navigationItem.rightBarButtonItem.enabled = NO;
     
     [self updateUserAndIndexes];
     
@@ -350,7 +350,7 @@
 }
 
 -(void) keyboardDidHide: (NSNotification *) notification {
-    self.navigationItem.rightBarButtonItem.enabled = YES;
+    self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
 - (IBAction)rightActionButtonPressed:(id)sender {
