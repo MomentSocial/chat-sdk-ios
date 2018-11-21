@@ -60,6 +60,32 @@ Pod::Spec.new do |s|
 
   end
 
+   s.subspec 'AudioMessages' do |am|
+
+    am.source_files = ['ChatSDKFirebase/AudioMessages/Classes/**/*']
+    am.resource_bundles = {
+      'ChatAudioMessages' => ['ChatSDKFirebase/AudioMessages/Assets/**/*', 'ChatSDKFirebase/AudioMessages/Interface/**/*']
+    }
+    
+    am.dependency 'ChatSDK/Core'
+    am.dependency 'ChatSDKFirebase/Adapter'
+    am.dependency 'ChatSDK/UI'
+
+  end
+
+    s.subspec 'Blocking' do |blo|
+
+    blo.source_files = ['ChatSDKFirebase/Blocking/Classes/**/*']
+    blo.resource_bundles = {
+      'ChatBlocking' => ['ChatSDKFirebase/Blocking/Assets/**/*', 'ChatSDKFirebase/Blocking/Interface/**/*']
+    }
+
+    blo.dependency 'ChatSDK/Core'
+    blo.dependency 'ChatSDKFirebase/Adapter'
+
+  end
+
+
  s.subspec 'SocialLogin' do |fsl|
 
 	fsl.source_files = ['ChatSDKFirebase/FirebaseSocialLogin/Classes/**/*']
