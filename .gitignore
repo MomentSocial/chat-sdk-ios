@@ -56,6 +56,5 @@ XcodeModules/
 # Ignore these in subfolders, but track in root of repo
 ChatSDKFirebaseAdapter/
 ChatSDKModules/
-!/ChatSDKFirebase/
 !/ChatSDKFirebaseAdapter/
 !/ChatSDKModules/
