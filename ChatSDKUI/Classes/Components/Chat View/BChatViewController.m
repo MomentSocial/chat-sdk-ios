@@ -53,7 +53,7 @@
         }
     }
     
-    [super setAudioEnabled: YES];
+    [super setAudioEnabled: BChatSDK.audioMessage != Nil];
 }
 
 -(void) updateSubtitle {
