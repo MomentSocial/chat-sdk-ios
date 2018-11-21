@@ -105,6 +105,7 @@
     _titleLabel.text = [NSBundle t: bThread];
     _titleLabel.textAlignment = NSTextAlignmentCenter;
     _titleLabel.font = [UIFont boldSystemFontOfSize:_titleLabel.font.pointSize];
+    _titleLabel.textColor = [UIColor whiteColor];
     
     [containerView addSubview:_titleLabel];
     _titleLabel.keepInsets.equal = 0;
