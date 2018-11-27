@@ -142,26 +142,27 @@
     _profilePicture.hidden = self.profilePictureHidden;
     
     // We only want to show the user picture if it is the latest message from the user
-    if (position & bMessagePosLast) {
+    if (nextMessage.userModel.hash != message.userModel.hash) {
+//    if (position & bMessagePosLast) {
         if (message.userModel) {
-            if(message.userModel.imageURL) {
+            
+            if (message.userModel.imageURL != NULL) {
+                
                 [_profilePicture sd_setImageWithURL:[NSURL URLWithString: message.userModel.imageURL]
                                    placeholderImage:message.userModel.defaultImage options:SDWebImageLowPriority & SDWebImageScaleDownLargeImages];
-            }
-            else if (message.userModel.imageAsImage) {
+            } else if (message.userModel.imageAsImage != NULL) {
                 [_profilePicture setImage:message.userModel.imageAsImage];
-            }
-            else {
+            } else {
+                NSLog(@"I'm here");
                 [_profilePicture setImage:message.userModel.defaultImage];
             }
-        }
-        else {
+            
+        } else {
             // If the user doesn't have a profile picture set the default profile image
             _profilePicture.image = message.userModel.defaultImage;
             _profilePicture.backgroundColor = [UIColor whiteColor];
         }
-    }
-    else {
+    } else {
         _profilePicture.image = nil;
     }
     
