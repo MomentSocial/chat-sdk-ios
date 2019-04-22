@@ -10,6 +10,7 @@
 
 #import <ChatSDK/Core.h>
 #import <ChatSDK/UI.h>
+#import "BProfilePicturesViewController.h"
 
 #define defaultCellHeight 
 
@@ -228,17 +229,24 @@
 // End bug fix for v3.0.2
 
 - (IBAction)profilePictureButtonPressed:(UIButton *)sender {
-    
+
+    if (BChatSDK.config.profilePicturesEnabled) {
+        BProfilePicturesViewController * ppvc = [[BProfilePicturesViewController alloc] init];
+        ppvc.user = self.user;
+        [self.navigationController pushViewController:ppvc animated:YES];
+        return;
+    }
+
     if (!_picker) {
         _picker = [[UIImagePickerController alloc] init];
         _picker.delegate = self;
         //_picker.allowsEditing = YES; // This allows the user to crop their image
     }
-    
+
     _picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
+
     _resetUser = NO;
-    
+
     [self presentViewController:_picker animated:YES completion:Nil];
 }
 
@@ -311,7 +319,13 @@
     // phoneNumberField.backgroundColor = borderColor;
     // phoneNumberField.userInteractionEnabled = isCurrent;
     
-    profilePictureButton.userInteractionEnabled = isCurrent;
+    phoneNumberField.backgroundColor = borderColor;
+    phoneNumberField.userInteractionEnabled = isCurrent;
+
+    if (!BChatSDK.config.profilePicturesEnabled) {
+        profilePictureButton.userInteractionEnabled = isCurrent;
+    }
+
 }
 
 -(void) logout {
@@ -325,7 +339,6 @@
         // emailField.text = @"";
         
         [profilePictureButton setImage:_user.defaultImage forState:UIControlStateNormal];
-        
         
         // Set the user object to nil so that we will load the new user when reloading it
         _user = nil;

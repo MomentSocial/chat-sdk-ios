@@ -170,21 +170,16 @@
                     
                     [BChatSDK.core save];
 
-                    [BChatSDK.hook executeHookWithName:bHookMessageRecieved data:@{bHookMessageReceived_PMessage: message.model}];
+                    if(BChatSDK.readReceipt) {
+                        [BChatSDK.readReceipt updateReadReceiptsForThread:self.model];
+                    }
 
                     if (newMessage) {
-                        // TODO: Maybe change here
-                        
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            [[NSNotificationCenter defaultCenter] postNotificationName:bNotificationMessageAdded
-                                                                                object:Nil
-                                                                              userInfo:@{bNotificationMessageAddedKeyMessage: message.model}];
+                            [BHookNotification notificationMessageReceived: message.model];
                             
-                            NSLog(@"Message: %@, %@", message.model.textString, message.model.date);
+//                            NSLog(@"Message: %@, %@", message.model.textString, message.model.date);
                             
-                            if(BChatSDK.readReceipt) {
-                                [BChatSDK.readReceipt updateReadReceiptsForThread:self.model];
-                            }
                         });
                     }
                     [promise resolveWithResult:self];
@@ -244,8 +239,9 @@
 
     FIRDatabaseReference * ref = [FIRDatabaseReference threadMetaRef:_model.entityID];
     [ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * snapshot) {
-        if(snapshot.value != [NSNull null]) {
-            for(NSString * key in snapshot.value) {
+        if(snapshot.value != [NSNull null] && [snapshot.value isKindOfClass: [NSDictionary class]]) {
+            NSDictionary * dict = (NSDictionary *) snapshot.value;
+            for(NSString * key in dict.allKeys) {
                 [_model setMetaValue:snapshot.value[key] forKey:key];
                 [[NSNotificationCenter defaultCenter] postNotificationName:bNotificationThreadMetaUpdated object:Nil];
             }

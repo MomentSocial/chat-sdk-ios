@@ -104,4 +104,15 @@
     //    [[BMapViewManager sharedManager] returnToPool: map];
 }
 
+#pragma Cell sizing static methods
+
++(NSNumber *) messageContentHeight: (id<PElmMessage>) message maxWidth: (float) maxWidth {
+    return [self messageContentWidth:message maxWidth:maxWidth];
+}
+
++(NSValue *) messageBubblePadding: (id<PElmMessage>) message {
+    return [NSValue valueWithUIEdgeInsets:UIEdgeInsetsMake(3.0, 3.0, 3.0, 3.0)];
+
+}
+
 @end
