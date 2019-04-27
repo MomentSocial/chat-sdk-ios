@@ -17,6 +17,7 @@
 @property (nonatomic, readwrite) id<PVideoMessageHandler> videoMessage;
 @property (nonatomic, readwrite) id<PAudioMessageHandler> audioMessage;
 @property (nonatomic, readwrite) id<PImageMessageHandler> imageMessage;
+@property (nonatomic, readwrite) id<PInvoiceMessageHandler> invoiceMessage;
 @property (nonatomic, readwrite) id<PLocationMessageHandler> locationMessage;
 @property (nonatomic, readwrite) id<PAuthenticationHandler> auth;
 @property (nonatomic, readwrite) id<PContactHandler> contact;

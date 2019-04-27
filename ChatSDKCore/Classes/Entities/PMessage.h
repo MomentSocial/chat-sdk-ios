@@ -20,6 +20,7 @@ typedef enum {
     bMessageTypeSystem = 5,
     bMessageTypeSticker = 6,
     bMessageTypeFile = 7,
+    bMessageTypeInvoice = 8,
     bMessageTypeCustom = 99,
 } bMessageType;
 
@@ -29,6 +30,10 @@ typedef enum {
     bMessagePosMiddle = bMessagePosFirst & bMessagePosLast,
     bMessagePosSingle = bMessagePosFirst | bMessagePosLast,
 } bMessagePos;
+
+// Added by Moments Social Team
+#define bMessageInvoiceServiceAmount @"service-amount"
+#define bMessageInvoiceServiceName @"service-name"
 
 #define bMessageText @"text"
 
@@ -54,6 +59,7 @@ typedef enum {
 
 // Is the message the first, last or a middle message
 //#define bMessagePosition @"position"
+
 
 
 #define bMessageOriginalThreadEntityID @"original-thread-entity-id"

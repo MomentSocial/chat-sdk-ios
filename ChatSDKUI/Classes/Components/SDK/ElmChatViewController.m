@@ -337,7 +337,7 @@
         (!BChatSDK.fileMessage && message.type.integerValue == bMessageTypeFile) ||
         (!BChatSDK.videoMessage && message.type.integerValue == bMessageTypeVideo) ||
         (!BChatSDK.fileMessage && message.type.integerValue == bMessageTypeFile) ||
-        (!BChatSDK.audioMessage && message.type.integerValue == bMessageTypeAudio)) {
+        (!BChatSDK.audioMessage && message.type.integerValue == bMessageTypeAudio) || (!BChatSDK.invoiceMessage && message.type.integerValue == bMessageTypeInvoice)) {
         // This is a standard text cell
         messageCell = [tableView_ dequeueReusableCellWithIdentifier:@"0"];
     }

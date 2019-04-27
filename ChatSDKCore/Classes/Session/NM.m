@@ -36,6 +36,10 @@
     return self.a.imageMessage;
 }
 
++(id<PInvoiceMessageHandler>) invoiceMessage {
+    return self.a.invoiceMessage;
+}
+
 +(id<PLocationMessageHandler>) locationMessage {
     return self.a.locationMessage;
 }

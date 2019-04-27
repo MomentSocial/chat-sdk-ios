@@ -101,6 +101,8 @@
 "bNoActiveParticipants" = "No Active Participants";
 "bDone" = "Done";
 "bEdit" = "Edit";
+"bClose" = "Close";
+
 "bNoMessages" = "No messages...";
 "bGroupName" = "Group Name";
 "bLastSeen_at_" = "Last seen %@ at %@";
@@ -182,5 +184,6 @@
 "bFileMessage" = "File Message";
 "bPhoto" = "Photo";
 "bFile" = "File";
-
+// Added by Moment Team
+"bInvoiceMessage" = "Invoice Message";
 "" = "";

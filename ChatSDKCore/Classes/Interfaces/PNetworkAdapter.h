@@ -17,6 +17,7 @@
 @protocol PUploadHandler;
 @protocol PVideoMessageHandler;
 @protocol PAudioMessageHandler;
+@protocol PInvoiceMessageHandler;
 @protocol PImageMessageHandler;
 @protocol PLocationMessageHandler;
 @protocol PAuthenticationHandler;
@@ -94,6 +95,7 @@
 -(id<PVideoMessageHandler>) videoMessage;
 -(id<PAudioMessageHandler>) audioMessage;
 -(id<PImageMessageHandler>) imageMessage;
+-(id<PInvoiceMessageHandler>) invoiceMessage;
 -(id<PLocationMessageHandler>) locationMessage;
 -(id<PContactHandler>) contact;
 -(id<PTypingIndicatorHandler>) typingIndicator;
@@ -121,6 +123,7 @@
 -(void) setVideoMessage: (id<PVideoMessageHandler>) videoMessage;
 -(void) setAudioMessage: (id<PAudioMessageHandler>) audioMessage;
 -(void) setImageMessage: (id<PImageMessageHandler>) imageMessage;
+-(void) setInvoiceMessage: (id<PInvoiceMessageHandler>) invoiceMessage;
 -(void) setLocationMessage: (id<PLocationMessageHandler>) locationMessage;
 -(void) setContact: (id<PContactHandler>) contact;
 -(void) setTypingIndicator: (id<PTypingIndicatorHandler>) typingIndicator;

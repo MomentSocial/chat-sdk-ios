@@ -20,6 +20,7 @@
 +(id<PVideoMessageHandler>) videoMessage;
 +(id<PAudioMessageHandler>) audioMessage;
 +(id<PImageMessageHandler>) imageMessage;
++(id<PInvoiceMessageHandler>) invoiceMessage;
 +(id<PLocationMessageHandler>) locationMessage;
 +(id<PPushHandler>) push;
 +(id<PContactHandler>) contact;

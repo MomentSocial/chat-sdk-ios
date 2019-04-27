@@ -66,6 +66,9 @@
     else if(message.type.intValue == bMessageTypeFile) {
         text = [self t:bFileMessage];
     }
+    else if(message.type.intValue == bMessageTypeInvoice) {
+        text = [self t:bInvoiceMessage];
+    }
     else {
         text = message.textString;
     }

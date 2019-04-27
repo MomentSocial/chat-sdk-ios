@@ -318,9 +318,6 @@
     
     // phoneNumberField.backgroundColor = borderColor;
     // phoneNumberField.userInteractionEnabled = isCurrent;
-    
-    phoneNumberField.backgroundColor = borderColor;
-    phoneNumberField.userInteractionEnabled = isCurrent;
 
     if (!BChatSDK.config.profilePicturesEnabled) {
         profilePictureButton.userInteractionEnabled = isCurrent;

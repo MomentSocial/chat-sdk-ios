@@ -101,6 +101,7 @@
 "bNoActiveParticipants" = "لا أحد نشط";
 "bDone" = "استعداد";
 "bEdit" = "ضبط";
+"bClose" = "إغلاق";
 "bNoMessages" = "لا توجد رسائل ...";
 "bGroupName" = "اسم المجموعة";
 "bLastSeen_at_" ="٪ @ ,٪ @ آخر ظهور على";
@@ -182,5 +183,7 @@
 "bFileMessage" = "ملف";
 "bPhoto" = "صور";
 "bFile" = "ملف";
+// Added by Moment Team
+"bInvoiceMessage" = "فاتورة";
 
 "" = "";

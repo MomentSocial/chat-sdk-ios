@@ -182,5 +182,7 @@
 "bFileMessage" = "Bestand";
 "bPhoto" = "Foto";
 "bFile" = "Bestand";
+// Added by Moment Team
+"bInvoiceMessage" = "Invoice Message";
 
 "" = "";

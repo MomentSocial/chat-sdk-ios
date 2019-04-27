@@ -125,6 +125,7 @@
 #define bDeleteLastPictureWarning @"bDeleteLastPictureWarning"
 #define bDone @"bDone"
 #define bEdit @"bEdit"
+#define bClose @"bClose"
 #define b_Ago @"b_Ago"
 
 #define bRemoveFriend @"bRemoveFriend"
@@ -183,7 +184,8 @@
 #define bVideoMessage @"bVideoMessage"
 #define bStickerMessage @"bStickerMessage"
 #define bFileMessage @"bFileMessage"
-
+// Added by Moment Team
+#define bInvoiceMessage @"bInvoiceMessage"
 @protocol PMessage;
 
 @interface NSBundle(ChatCore)

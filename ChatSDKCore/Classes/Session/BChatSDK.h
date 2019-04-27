@@ -65,6 +65,7 @@
 +(id<PUploadHandler>) upload;
 +(id<PVideoMessageHandler>) videoMessage;
 +(id<PAudioMessageHandler>) audioMessage;
++(id<PInvoiceMessageHandler>) invoiceMessage;
 +(id<PImageMessageHandler>) imageMessage;
 +(id<PLocationMessageHandler>) locationMessage;
 +(id<PPushHandler>) push;
